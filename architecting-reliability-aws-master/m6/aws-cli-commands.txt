@@ -1,0 +1,7 @@
+aws cloudformation deploy --template-file "app-stack.json" --stack-name "app-stack-1"
+aws cloudformation deploy --template-file "app-stack.json" --stack-name "app-stack-2"
+aws cloudformation describe-stacks --stack-name "app-stack-1"
+aws cloudformation describe-stacks --stack-name "app-stack-2"
+aws cloudformation delete-stack --stack-name "app-stack-1"
+aws ec2 describe-instances --query "Reservations[*].Instances[*].PublicIpAddress" --output=text
+aws cloudformation delete-stack --stack-name "app-stack-2"

@@ -1,0 +1,10 @@
+aws acm list-certificates
+aws cloudformation validate-template --template-body file://app-stack.json
+aws cloudformation validate-template --template-body file://network-stack.json
+aws s3 cp network-stack.json s3://benpiper.com-cftemplates
+aws cloudformation deploy --template-file "app-stack.json" --stack-name "app-stack"
+aws cloudformation describe-stacks --stack-name "app-stack"
+aws autoscaling describe-auto-scaling-instances
+aws elbv2 describe-load-balancers --names "webtier"
+aws cloudformation delete-stack --stack-name "app-stack"
+aws cloudformation describe-stacks
