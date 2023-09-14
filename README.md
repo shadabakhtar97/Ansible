@@ -1,9 +1,9 @@
 # Ansible by Shadab Akhtar 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Ansible Ad-hoc Commands
-What is EPEL ?
+## What is EPEL ?
 ---------------
-EPEL (Extra Packages for Enterprise Linux) is open source and free community based repository project from Fedora team which provides 100% high quality add-on software packages for Linux distribution including RHEL (Red Hat Enterprise Linux), CentOS, and Scientific Linux
+### EPEL (Extra Packages for Enterprise Linux) is open source and free community based repository project from Fedora team which provides 100% high quality add-on software packages for Linux distribution including RHEL (Red Hat Enterprise Linux), CentOS, and Scientific Linux
 Why we use EPEL repository?
 ----------------------------
 Provides lots of open source packages to install via Yum.
