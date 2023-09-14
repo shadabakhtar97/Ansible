@@ -46,7 +46,7 @@ Hands-on: Success
         state: present
 
 Hands-on: Success
-=====================================================================================================================================
+===============================================================================================================================================================================================================
 # Playbook-3: Installation of Apache-Tomcat
 ---
 - name: Installation of Apache-Tomcat
@@ -58,3 +58,15 @@ Hands-on: Success
     - name: Start httpd Service
       service: name=httpd state=restarted
 Hands-on: Success
+
+===============================================================================================================================================================================================================
+# Playbook-5: Installation of Docker
+---
+- name: Installation of Docker
+  hosts: remote@13.233.150.29
+  become: true
+  tasks:
+    - name: Install docker package
+      yum: name=httpd state=latest
+    - name: Start httpd Service
+      service: name=httpd state=restarted
