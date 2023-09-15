@@ -72,10 +72,9 @@ Hands-on: Success
       service: name=httpd state=restarted
 
 
-# Tomcat
-## Learn Apache Tomcat Deep Dive
+# Ansible Playbooks for Tomcat
 
-### To check the status of the Apache HTTP server (httpd) using an Ansible playbook, you can use the Ansible "command" or "shell" module to run the appropriate command on the target server. Here's a simple example of how to do this:
+## To check the status of the Apache HTTP server (httpd) using an Ansible playbook, you can use the Ansible "command" or "shell" module to run the appropriate command on the target server. Here's a simple example of how to do this:
 
 1. Create an Ansible playbook, e.g., `check_httpd_status.yml`.
 
