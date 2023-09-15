@@ -1,7 +1,7 @@
-# Ansible by Shadab Akhtar 
+### Ansible by Shadab Akhtar 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Ansible Ad-hoc Commands
-## What is EPEL ?
+### Ansible Ad-hoc Commands
+### What is EPEL ?
 ---------------
 ### EPEL (Extra Packages for Enterprise Linux) is open source and free community based repository project from Fedora team which provides 100% high quality add-on software packages for Linux distribution including RHEL (Red Hat Enterprise Linux), CentOS, and Scientific Linux
 Why we use EPEL repository?
@@ -13,11 +13,11 @@ All epel packages are maintained by Fedora repo.
 How To Enable EPEL Repository in RHEL/CentOS 7/6/5 64 Bit ?
 AWS AMI-RHEL-7.6_HVM_BETA-20180814-x86_64-0-Hourly2-GP2 - ami-006b2db4ca7e39d7d
 
-# wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm 
+### wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm 
 
-# rpm -ivh epel-release-latest-7.noarch.rpm
+### rpm -ivh epel-release-latest-7.noarch.rpm
 
-# yum install ansible
+### yum install ansible
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Playbook-1: Copy Tasks
