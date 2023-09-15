@@ -169,4 +169,35 @@ Make sure you have SSH access and appropriate permissions to run commands on the
            var: httpd_status
    ```
 
-Make sure to adapt these steps to your specific server configuration and distribution. The key is to ensure that the correct service name is used and that Ansible has the necessary privileges to query the service status.
+Make sure to adapt these steps to your specific server configuration and distribution. The key is to ensure that the correct service name is used and that Ansible has the necessary privileges to query the service status
+
+### Ansbile Ad-Hoc Commands and Playbooks "sudo" Alternates is become
+In Ansible ad-hoc commands, you can use the `--become` flag to indicate that you want to execute the command with escalated privileges, typically by becoming the root user or using another privilege escalation method like sudo. The `--become` flag is equivalent to using `sudo` or other privilege escalation methods when running a command on remote hosts.
+
+Here's the basic syntax for using the `--become` flag in an Ansible ad-hoc command:
+
+```bash
+ansible <target_hosts> -m <module_name> -a "<module_arguments>" --become
+```
+
+Here's a breakdown of the components:
+
+- `<target_hosts>`: This is where you specify the target hosts or groups of hosts on which you want to run the ad-hoc command.
+- `<module_name>`: Replace this with the name of the Ansible module you want to use in your ad-hoc command.
+- `<module_arguments>`: These are the arguments and options specific to the chosen module.
+- `--become`: This flag indicates that you want to execute the command with escalated privileges.
+
+For example, if you want to create a directory with escalated privileges (using the `file` module) on a remote host, you can use the following Ansible ad-hoc command:
+
+```bash
+ansible my_server -m file -a "path=/mydir state=directory" --become
+```
+
+In this example:
+
+- `my_server` is the target host.
+- `file` is the module used to manage files and directories.
+- `path=/mydir state=directory` are the module arguments to create a directory named "mydir."
+- `--become` indicates that you want to execute the command with escalated privileges.
+
+Make sure you have the necessary permissions and authentication set up for privilege escalation (e.g., sudo) on your target hosts for this to work. Additionally, if you need to specify a different user for privilege escalation, you can use the `--become-user` flag followed by the desired username.
