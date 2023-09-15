@@ -111,7 +111,7 @@ The playbook will connect to the target server(s), run the command to check the 
 
 Make sure you have SSH access and appropriate permissions to run commands on the target server(s) using Ansible
 
-# Issue: fatal: [remote@172.31.47.58]: FAILED! => {"changed": true, "cmd": "systemctl is-active httpd", "delta": "0:00:00.042619", "end": "2023-09-15 09:58:25.305827", "msg": "non-zero return code", "rc": 3, "start": "2023-09-15 09:58:25.263208", "stderr": "", "stderr_lines": [], "stdout": "unknown", "stdout_lines": ["unknown"]}
+### Issue: fatal: [remote@172.31.47.58]: FAILED! => {"changed": true, "cmd": "systemctl is-active httpd", "delta": "0:00:00.042619", "end": "2023-09-15 09:58:25.305827", "msg": "non-zero return code", "rc": 3, "start": "2023-09-15 09:58:25.263208", "stderr": "", "stderr_lines": [], "stdout": "unknown", "stdout_lines": ["unknown"]}
 
 ##  The "unknown" status returned by the `systemctl is-active httpd` command usually means that the Apache HTTP server (`httpd`) is not installed on the target server or that it's not recognized as a valid service by `systemctl`. Here are some troubleshooting steps to address this issue:
 
